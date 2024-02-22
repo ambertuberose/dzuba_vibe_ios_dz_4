@@ -1,0 +1,112 @@
+//Создадим энам с разными музыкальными жанрами с типом RawValue Int
+enum MusicGenre: Int {
+    case rock = 1
+    case pop
+    case jazz
+    case hipHop
+    case classical
+}
+
+//Создадим энам с направлениями света с типом RawValue String
+enum Direction: String {
+    case north = "North"
+    case south = "South"
+    case east = "East"
+    case west = "West"
+}
+
+
+//Создадим enum для заполнения полей структуры анкеты сотрудника:
+enum Gender {
+    case male, female
+}
+
+enum AgeCategory {
+    case child, teenager, adult
+}
+
+enum Experience {
+    case junior, midLevel, senior
+}
+
+
+//Создадим enum со всеми цветами радуги:
+enum RainbowColor {
+    case red, orange, yellow, green, blue, indigo, violet
+}
+
+//Создадим функцию, которая содержит массив разных case'ов enum и выводит содержимое в консоль:
+func printRainbowColors() {
+    let rainbowColors: [RainbowColor] = [.red, .orange, .yellow, .green, .blue, .indigo, .violet]
+    
+    for color in rainbowColors {
+        switch color {
+        case .red:
+            print("Apple \(color)")
+        case .orange:
+            print("Sun \(color)")
+        case .yellow:
+            print("Banana \(color)")
+        case .green:
+            print("Leaf \(color)")
+        case .blue:
+            print("Sky \(color)")
+        case .indigo:
+            print("Ocean \(color)")
+        case .violet:
+            print("Lavender \(color)")
+        }
+    }
+}
+
+printRainbowColors()
+
+
+//Создадим функцию, которая выставляет оценки ученикам в школе, используя enum Score
+enum Score: String {
+    case A = "Excellent"
+    case B = "Good"
+    case C = "Average"
+    case D = "Below Average"
+    case F = "Fail"
+}
+
+func printNumericScore(score: Score) {
+    switch score {
+    case .A:
+        print("Score: 5")
+    case .B:
+        print("Score: 4")
+    case .C:
+        print("Score: 3")
+    case .D:
+        print("Score: 2")
+    case .F:
+        print("Score: 1")
+    }
+}
+
+let studentScore: Score = .B
+printNumericScore(score: studentScore)
+
+
+//Создадим метод, который выводит в консоль какие автомобили стоят в гараже, используя enum:
+enum Car {
+    case jiguli, vaz, volga
+}
+
+func printGarageContents(_ garage: [Car]) {   
+    for car in garage {
+        switch car {
+        case .jiguli:
+            print("Jiguli is in the garage")
+        case .vaz:
+            print("Vaz is in the garage")
+        case .volga:
+            print("Volga is in the garage")
+        }
+    }
+}
+
+let machine: [Car] = [.vaz, .vaz]
+printGarageContents(machine)
